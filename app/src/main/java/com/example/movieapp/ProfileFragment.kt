@@ -39,7 +39,6 @@ class ProfileFragment : Fragment() {
            }
        }
     }
-
     private fun saveInfo() {
        var shPref :SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
         var editor = shPref.edit()
@@ -50,8 +49,6 @@ class ProfileFragment : Fragment() {
         editor.putString("phonNumber", binding.phone.text.toString())
         editor.apply()
     }
-
-
     fun isfielsFullAndCorrect():Boolean {
         if (binding.fullName.text.isNullOrBlank()) {
             binding.fullName.error = "این فیلد را پر کنید."
@@ -75,5 +72,4 @@ class ProfileFragment : Fragment() {
         }
         return true
     }
-
 }
