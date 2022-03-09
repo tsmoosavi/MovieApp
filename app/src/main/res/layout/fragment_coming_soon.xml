@@ -1,14 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".ComingSoonFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="20dp">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/green"
+            android:gravity="center"
+            android:text="@string/comingSoon"
+            android:textColor="#000000"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:cornerRadius="15dp">
+
+        </com.google.android.material.button.MaterialButton>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/avater"
+                android:layout_width="wrap_content"
+                android:layout_height="215dp"
+                android:layout_marginEnd="210dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/avatar" />
+
+            <TextView
+                android:id="@+id/avatarTxv"
+                android:layout_width="124dp"
+                android:layout_height="61dp"
+                android:layout_marginBottom="76dp"
+                android:gravity="end"
+                android:text="@string/avatar"
+                android:textColor="@color/yellow"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/share1"
+                app:layout_constraintStart_toEndOf="@id/avater" />
+
+            <ImageButton
+                android:id="@+id/share1"
+                android:layout_width="40dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/black"
+                android:src="@android:drawable/ic_menu_share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/avatarTxv"
+                app:layout_constraintTop_toTopOf="@id/avatarTxv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/matrix"
+                android:layout_width="wrap_content"
+                android:layout_height="215dp"
+                android:layout_marginEnd="210dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/matrix" />
+
+            <TextView
+                android:id="@+id/matrixTxv"
+                android:layout_width="124dp"
+                android:layout_height="61dp"
+                android:layout_marginBottom="76dp"
+                android:gravity="end"
+                android:text="@string/matrix"
+                android:textColor="@color/yellow"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/share2"
+                app:layout_constraintStart_toEndOf="@id/matrix" />
+
+            <ImageButton
+                android:id="@+id/share2"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/black"
+                android:src="@android:drawable/ic_menu_share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/matrixTxv"
+                app:layout_constraintTop_toTopOf="@id/matrixTxv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/sing2"
+                android:layout_width="wrap_content"
+                android:layout_height="215dp"
+                android:layout_marginEnd="210dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/singtow" />
+
+            <TextView
+                android:id="@+id/singTowTxv"
+                android:layout_width="124dp"
+                android:layout_height="61dp"
+                android:layout_marginBottom="76dp"
+                android:gravity="end"
+                android:text="@string/singTow"
+                android:textColor="@color/yellow"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/share3"
+                app:layout_constraintStart_toEndOf="@id/sing2" />
+
+            <ImageButton
+                android:id="@+id/share3"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/black"
+                android:src="@android:drawable/ic_menu_share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/singTowTxv"
+                app:layout_constraintTop_toTopOf="@id/singTowTxv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

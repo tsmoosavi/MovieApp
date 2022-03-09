@@ -14,5 +14,9 @@
     <string name="freeGuy">free guy</string>
     <string name="sing">sing</string>
     <string name="profileIntro">لطفا مشخصات خود را به طور کامل وارد کنید.</string>
+    <string name="avatar">avatar</string>
+    <string name="comingSoon">coming Soon...</string>
+    <string name="matrix">Matrix</string>
+    <string name="singTow">sing 2</string>
 
 </resources>
