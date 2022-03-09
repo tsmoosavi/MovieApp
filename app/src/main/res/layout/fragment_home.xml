@@ -33,7 +33,9 @@
                     android:id="@+id/fast5"
                     android:layout_width="137dp"
                     android:layout_height="215dp"
+                    android:layout_marginTop="4dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.333"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/fastfive" />
@@ -58,6 +60,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -100,6 +103,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -141,6 +145,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -192,6 +197,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -233,6 +239,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -274,6 +281,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -325,6 +333,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -366,6 +375,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -406,6 +416,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -459,6 +470,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -500,6 +512,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -543,6 +556,7 @@
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
+                    android:background="@color/blue"
                     android:src="@android:drawable/btn_star_big_off"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
