@@ -7,5 +7,12 @@
     <string name="fast7">fast and furious 7</string>
     <string name="fast8">fast and furious 8</string>
     <string name="fast9">fast and furious 9</string>
+    <string name="missionImpossible3">mission Impossible 3</string>
+    <string name="missionImpossible4">mission Impossible 4</string>
+    <string name="missionImpossible5">mission Impossible 5</string>
+    <string name="venom">venom</string>
+    <string name="venom2">venom 2</string>
+    <string name="freeGuy">free guy</string>
+    <string name="sing">sing</string>
 
 </resources>

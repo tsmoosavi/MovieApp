@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
+    android:backgroundTint="@color/black"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -18,13 +19,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/movie1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:padding="5dp">
 
                 <ImageView
                     android:id="@+id/fast5"
@@ -39,7 +42,8 @@
                     android:id="@+id/txv1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/yellow"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/fast5"
                     android:textSize="17sp"
@@ -65,7 +69,8 @@
                 android:id="@+id/movie2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:padding="5dp">
 
                 <ImageView
                     android:id="@+id/fast6"
@@ -79,7 +84,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/yellow"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/fast6"
                     android:textSize="17sp"
@@ -103,7 +109,8 @@
                 android:id="@+id/movie3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:padding="5dp">
 
                 <ImageView
                     android:id="@+id/fast7"
@@ -118,7 +125,8 @@
                     android:id="@+id/txv3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/yellow"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/fast7"
                     android:textSize="17sp"
@@ -145,37 +153,131 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/movie4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:padding="5dp">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="hello4" />
+                <ImageView
+                    android:id="@+id/fast8"
+                    android:layout_width="137dp"
+                    android:layout_height="215dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/fasteight" />
+
+                <TextView
+                    android:id="@+id/txv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/fast8"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@id/fast8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/star4"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/btn_star_big_off"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/movie5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:padding="5dp">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="hello5" />
+                <ImageView
+                    android:id="@+id/fast9"
+                    android:layout_width="137dp"
+                    android:layout_height="215dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/fastnine" />
+
+                <TextView
+                    android:id="@+id/txv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/fast9"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@id/fast9"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/star5"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/btn_star_big_off"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/movie6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"></androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_weight="1"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/mi3"
+                    android:layout_width="137dp"
+                    android:layout_height="215dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mithree" />
+
+                <TextView
+                    android:id="@+id/txv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/missionImpossible3"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@id/mi3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/star6"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/btn_star_big_off"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
@@ -184,37 +286,132 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/movie7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:padding="5dp">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="hello7" />
+                <ImageView
+                    android:id="@+id/mi4"
+                    android:layout_width="137dp"
+                    android:layout_height="215dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mifour" />
+
+                <TextView
+                    android:id="@+id/txv7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/missionImpossible4"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@id/mi4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/star7"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/btn_star_big_off"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/movie8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:padding="5dp">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="hello8" />
+                <ImageView
+                    android:id="@+id/mi5"
+                    android:layout_width="137dp"
+                    android:layout_height="215dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mifive" />
+
+                <TextView
+                    android:id="@+id/txv8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/missionImpossible5"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@id/mi5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/star8"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/btn_star_big_off"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/movie9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"></androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_weight="1"
+                android:padding="5dp">
+                <ImageView
+                    android:id="@+id/freeguy"
+                    android:layout_width="137dp"
+                    android:layout_height="215dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/freeguy" />
+
+                <TextView
+                    android:id="@+id/txv9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/freeGuy"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@id/freeguy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/star9"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/btn_star_big_off"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
@@ -223,37 +420,133 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/movie10"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:padding="5dp">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="hello10" />
+                <ImageView
+                    android:id="@+id/venom1"
+                    android:layout_width="137dp"
+                    android:layout_height="215dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/venomone" />
+
+                <TextView
+                    android:id="@+id/txv10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/venom"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@id/venom1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/star10"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/btn_star_big_off"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/movie11"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:padding="5dp">
+                <ImageView
+                    android:id="@+id/venom2"
+                    android:layout_width="137dp"
+                    android:layout_height="215dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/venomtow" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="hello11" />
+                <TextView
+                    android:id="@+id/txv11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/venom2"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@id/venom2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/star11"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/btn_star_big_off"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/movie12"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"></androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_weight="1"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/sing"
+                    android:layout_width="137dp"
+                    android:layout_height="215dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/sing" />
+
+                <TextView
+                    android:id="@+id/txv12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/sing"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@id/sing"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/sta12"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/btn_star_big_off"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </LinearLayout>
