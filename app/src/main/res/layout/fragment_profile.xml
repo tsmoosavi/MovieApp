@@ -6,12 +6,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/green"
+            android:gravity="center"
+            android:text="@string/profileIntro"
+            android:textColor="#000000"
+            android:textSize="29sp"
+            android:textStyle="bold"
+            app:cornerRadius="15dp">
+
+        </com.google.android.material.button.MaterialButton>
 
         <EditText
             android:id="@+id/fullName"
