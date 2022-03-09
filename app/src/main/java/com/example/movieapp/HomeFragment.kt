@@ -3,6 +3,7 @@ package com.example.movieapp
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.movieapp.databinding.FragmentHomeBinding
 
 
@@ -46,16 +47,18 @@ class HomeFragment : Fragment() {
         }
 
     }
+    private fun goToProfileFragmint() {
+        findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
+    }
+    private fun goToFavoriteFragmint() {
+        findNavController().navigate(R.id.action_homeFragment_to_favoriteFragment)
+    }
 
     private fun goToComingSoonFragmint() {
-        TODO("Not yet implemented")
+        findNavController().navigate(R.id.action_homeFragment_to_comingSoonFragment)
     }
 
-    private fun goToFavoriteFragmint() {
-        TODO("Not yet implemented")
-    }
 
-    private fun goToProfileFragmint() {
-        TODO("Not yet implemented")
-    }
+
+
 }
