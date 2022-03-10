@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/blue"
     android:backgroundTint="@color/black"
     tools:context=".HomeFragment">
 
@@ -26,8 +26,8 @@
                 android:id="@+id/movie1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/fast5"
@@ -35,7 +35,7 @@
                     android:layout_height="215dp"
                     android:layout_marginTop="4dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.333"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/fastfive" />
@@ -44,15 +44,15 @@
                     android:id="@+id/txv1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/fast5"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/fast5"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fast5" />
 
                 <ImageButton
                     android:id="@+id/star1"
@@ -61,7 +61,8 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:backgroundTintMode="screen"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,8 +73,8 @@
                 android:id="@+id/movie2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/fast6"
@@ -87,15 +88,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/fast6"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/fast6"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fast6" />
 
                 <ImageButton
                     android:id="@+id/star2"
@@ -104,7 +105,7 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -113,8 +114,8 @@
                 android:id="@+id/movie3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/fast7"
@@ -129,15 +130,15 @@
                     android:id="@+id/txv3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/fast7"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/fast7"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fast7" />
 
                 <ImageButton
                     android:id="@+id/star3"
@@ -146,7 +147,8 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:backgroundTintMode="multiply"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -165,8 +167,8 @@
                 android:id="@+id/movie4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="2dp">
+                android:layout_margin="2dp"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/fast8"
@@ -181,15 +183,15 @@
                     android:id="@+id/txv4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/fast8"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/fast8"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fast8" />
 
                 <ImageButton
                     android:id="@+id/star4"
@@ -198,7 +200,7 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -207,8 +209,8 @@
                 android:id="@+id/movie5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/fast9"
@@ -223,15 +225,15 @@
                     android:id="@+id/txv5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/fast9"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/fast9"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fast9" />
 
                 <ImageButton
                     android:id="@+id/star5"
@@ -240,7 +242,7 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -249,8 +251,8 @@
                 android:id="@+id/movie6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/mi3"
@@ -265,15 +267,15 @@
                     android:id="@+id/txv6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/missionImpossible3"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/mi3"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mi3" />
 
                 <ImageButton
                     android:id="@+id/star6"
@@ -282,7 +284,7 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -301,8 +303,8 @@
                 android:id="@+id/movie7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/mi4"
@@ -317,15 +319,15 @@
                     android:id="@+id/txv7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/missionImpossible4"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/mi4"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mi4" />
 
                 <ImageButton
                     android:id="@+id/star7"
@@ -334,7 +336,7 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -343,8 +345,8 @@
                 android:id="@+id/movie8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="2dp">
+                android:layout_margin="2dp"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/mi5"
@@ -359,15 +361,15 @@
                     android:id="@+id/txv8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/missionImpossible5"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/mi5"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mi5" />
 
                 <ImageButton
                     android:id="@+id/star8"
@@ -376,7 +378,7 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -385,8 +387,9 @@
                 android:id="@+id/movie9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+
                 <ImageView
                     android:id="@+id/freeguy"
                     android:layout_width="137dp"
@@ -400,15 +403,15 @@
                     android:id="@+id/txv9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/freeGuy"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/freeguy"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/freeguy" />
 
                 <ImageButton
                     android:id="@+id/star9"
@@ -417,7 +420,7 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -438,8 +441,8 @@
                 android:id="@+id/movie10"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/venom1"
@@ -454,15 +457,15 @@
                     android:id="@+id/txv10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/venom"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/venom1"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/venom1" />
 
                 <ImageButton
                     android:id="@+id/star10"
@@ -471,7 +474,7 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -481,8 +484,9 @@
                 android:id="@+id/movie11"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+
                 <ImageView
                     android:id="@+id/venom2"
                     android:layout_width="137dp"
@@ -496,15 +500,15 @@
                     android:id="@+id/txv11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/venom2"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/venom2"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/venom2" />
 
                 <ImageButton
                     android:id="@+id/star11"
@@ -513,7 +517,7 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -524,8 +528,8 @@
                 android:id="@+id/movie12"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/sing"
@@ -540,15 +544,15 @@
                     android:id="@+id/txv12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/sing"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    app:layout_constraintTop_toBottomOf="@id/sing"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sing" />
 
                 <ImageButton
                     android:id="@+id/sta12"
@@ -557,7 +561,7 @@
                     android:layout_marginTop="160dp"
                     android:layout_marginEnd="10dp"
                     android:background="@color/blue"
-                    android:src="@android:drawable/btn_star_big_off"
+                    android:src="@drawable/ic_outline_star_border_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
