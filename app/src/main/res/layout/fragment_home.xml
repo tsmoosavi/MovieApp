@@ -555,7 +555,7 @@
                     app:layout_constraintTop_toBottomOf="@id/sing" />
 
                 <ImageButton
-                    android:id="@+id/sta12"
+                    android:id="@+id/star12"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_marginTop="160dp"
