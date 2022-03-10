@@ -15,8 +15,9 @@
     <string name="sing">sing</string>
     <string name="profileIntro">لطفا مشخصات خود را به طور کامل وارد کنید.</string>
     <string name="avatar">avatar</string>
+    <string name="avatar2">Avatar 2</string>
     <string name="comingSoon">coming Soon...</string>
-    <string name="matrix">Matrix</string>
-    <string name="singTow">sing 2</string>
+    <string name="matrix4">Matrix 4</string>
+    <string name="singTow">Sing 2</string>
 
 </resources>
