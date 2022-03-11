@@ -1,14 +1,19 @@
 package com.example.movieapp
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
+import android.widget.Button
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.movieapp.databinding.FragmentHomeBinding
 
 
 class HomeFragment : Fragment() {
+
     lateinit var binding: FragmentHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +38,12 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         changeStarColor()
-//        binding.star1.setOnClickListener{
-//            binding.star1.setBackgroundResource(R.color.black)
-//        }
+
 
     }
-    fun changeStarColor(){
+
+
+   fun changeStarColor(){
 
         var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
             binding.star4,binding.star5,binding.star6,
@@ -46,7 +51,14 @@ class HomeFragment : Fragment() {
             binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
         for (button in buttonList){
             button.setOnClickListener{
-                button.setBackgroundResource(R.color.yellow)
+                var shPref :SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
+                if (shPref.getString("name",null)!= null){
+                    button.setBackgroundResource(R.color.yellow)
+                }else{
+                    Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()
+                }
+
+                
             }
         }
     }
@@ -75,7 +87,8 @@ class HomeFragment : Fragment() {
 
     }
     private fun goToProfileFragmint() {
-        findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
+        var bundle = bundleOf("h" to 1)
+        findNavController().navigate(R.id.action_homeFragment_to_profileFragment,bundle)
     }
     private fun goToFavoriteFragmint() {
         findNavController().navigate(R.id.action_homeFragment_to_favoriteFragment)

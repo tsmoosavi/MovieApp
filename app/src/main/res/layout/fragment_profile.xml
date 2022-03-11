@@ -75,8 +75,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:ems="10"
+            android:maxLength="11"
             android:hint="phone"
-            android:inputType="textPassword"
+            android:inputType="number"
             android:minHeight="48dp" />
 
 
