@@ -18,4 +18,6 @@ object Film {
 
 }
 
-class Movie(var imageId:Int, var nameId: Int, var starId: Int)
+class Movie(var imageId:Int, var nameId: Int, var starId: Int){
+    var isFavorite = false
+}

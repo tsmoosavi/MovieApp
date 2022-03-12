@@ -14,6 +14,7 @@ import com.example.movieapp.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
+
     lateinit var binding: FragmentHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +38,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         changeStarColor()
 
 
@@ -44,21 +46,24 @@ class HomeFragment : Fragment() {
 
 
    fun changeStarColor(){
-
         var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
             binding.star4,binding.star5,binding.star6,
             binding.star7,binding.star8,binding.star9,
             binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
-        for (button in buttonList){
-            button.setOnClickListener{
+        for (i in 0 until buttonList.size){
+            buttonList[i].setOnClickListener{
                 var shPref :SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
                 if (shPref.getString("name",null)!= null){
-                    button.setBackgroundResource(R.color.yellow)
+                    Film.movieList[i].isFavorite = (!Film.movieList[i].isFavorite)
+                    if (Film.movieList[i].isFavorite){
+                        buttonList[i].setBackgroundResource(R.color.yellow)
+                    }else{
+                        buttonList[i].setBackgroundResource(R.color.blue)
+                    }
+//                    buttonList[i].setBackgroundResource(R.color.yellow)
                 }else{
                     Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()
                 }
-
-                
             }
         }
     }

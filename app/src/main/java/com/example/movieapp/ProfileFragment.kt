@@ -47,6 +47,7 @@ class ProfileFragment : Fragment() {
         editor.putString("email", binding.email.text.toString())
         editor.putString("password", binding.password.text.toString())
         editor.putString("phonNumber", binding.phone.text.toString())
+        editor.clear().apply()
              editor.apply()
     }
     fun isfielsFullAndCorrect():Boolean {

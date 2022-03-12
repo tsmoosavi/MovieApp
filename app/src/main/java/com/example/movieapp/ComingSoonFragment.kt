@@ -1,6 +1,8 @@
 package com.example.movieapp
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,17 +29,32 @@ class ComingSoonFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        var shPref : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
             binding.share1.setOnClickListener{
-                Toast.makeText(context, R.string.avatar2, Toast.LENGTH_SHORT).show()
-                firstMovieShareInfo()
+                if (shPref.getString("name",null)!= null){
+                    Toast.makeText(context, R.string.avatar2, Toast.LENGTH_SHORT).show()
+                    firstMovieShareInfo()
+                }else{
+                    Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()
+                }
+
             }
         binding.share2.setOnClickListener{
-            Toast.makeText(context, R.string.matrix4, Toast.LENGTH_SHORT).show()
-            secondMovieShareInfo()
+            if (shPref.getString("name",null)!= null){
+                Toast.makeText(context, R.string.matrix4, Toast.LENGTH_SHORT).show()
+                secondMovieShareInfo()
+            }else{
+                Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()
+            }
+
         }
         binding.share3.setOnClickListener{
-            Toast.makeText(context, R.string.singTow, Toast.LENGTH_SHORT).show()
-            thirdMovieShareInfo()
+            if (shPref.getString("name",null)!= null){
+                Toast.makeText(context, R.string.singTow, Toast.LENGTH_SHORT).show()
+                thirdMovieShareInfo()
+            }else{
+                Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()}
+
         }
     }
 

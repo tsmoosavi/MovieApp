@@ -9,6 +9,8 @@ import com.example.movieapp.databinding.FragmentFavoriteBinding
 
 
 class FavoriteFragment : Fragment() {
+//    var imageList = arrayListOf(binding.)
+//    var movieNameList = arrayListOf()
     lateinit var binding: FragmentFavoriteBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +25,10 @@ class FavoriteFragment : Fragment() {
         binding  = FragmentFavoriteBinding.inflate(inflater,container,false)
         // Inflate the layout for this fragment
         return binding.root
+
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
 }
