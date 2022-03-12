@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.example.movieapp.databinding.FragmentProfileBinding
 
 
@@ -49,6 +50,8 @@ class ProfileFragment : Fragment() {
         editor.putString("phonNumber", binding.phone.text.toString())
         editor.clear().apply()
              editor.apply()
+        Toast.makeText(context, "اطلاعات شما با موفقیت ثبت شد.", Toast.LENGTH_SHORT).show()
+        findNavController().navigate(R.id.action_profileFragment_to_homeFragment)
     }
     fun isfielsFullAndCorrect():Boolean {
         if (binding.fullName.text.isNullOrBlank()) {
