@@ -46,10 +46,10 @@ class HomeFragment : Fragment() {
 
 
    fun changeStarColor(){
-        var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
-            binding.star4,binding.star5,binding.star6,
-            binding.star7,binding.star8,binding.star9,
-            binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
+       var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
+           binding.star4,binding.star5,binding.star6,
+           binding.star7,binding.star8,binding.star9,
+           binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
         for (i in 0 until buttonList.size){
             buttonList[i].setOnClickListener{
                 var shPref :SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
