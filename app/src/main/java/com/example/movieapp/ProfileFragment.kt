@@ -30,16 +30,31 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        showInfo()
         buttonClickListener()
+
     }
 
     private fun buttonClickListener() {
        binding.register.setOnClickListener{
            if (isfielsFullAndCorrect()){
                 saveInfo()
+
            }
        }
     }
+
+    private fun showInfo() {
+        var shPref :SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
+        if (shPref.getString("name",null)!= null){
+            binding.fullName.setText(shPref.getString("name",null))
+            binding.userName.setText(shPref.getString("userName",null))
+            binding.email.setText(shPref.getString("email",null))
+            binding.password.setText(shPref.getString("password",null))
+            binding.phone.setText(shPref.getString("phonNumber",null))
+        }
+    }
+
     private fun saveInfo() {
        var shPref :SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
         var editor = shPref.edit()
@@ -48,7 +63,6 @@ class ProfileFragment : Fragment() {
         editor.putString("email", binding.email.text.toString())
         editor.putString("password", binding.password.text.toString())
         editor.putString("phonNumber", binding.phone.text.toString())
-        editor.clear().apply()
              editor.apply()
         Toast.makeText(context, "اطلاعات شما با موفقیت ثبت شد.", Toast.LENGTH_SHORT).show()
         findNavController().navigate(R.id.action_profileFragment_to_homeFragment)
