@@ -43,7 +43,6 @@ class ProfileFragment : Fragment() {
            }
        }
     }
-
     private fun showInfo() {
         var shPref :SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
         if (shPref.getString("name",null)!= null){

@@ -58,8 +58,6 @@ class HomeFragment : Fragment() {
         }
 
     }
-
-
     fun changeStarColor(){
        var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
            binding.star4,binding.star5,binding.star6,
@@ -79,6 +77,7 @@ class HomeFragment : Fragment() {
                     }
                 }else{
                     Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()
+                    findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
                 }
             }
        }
