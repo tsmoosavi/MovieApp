@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.movieapp.databinding.FragmentHomeBinding
 
-
+var favoriteMovieList = arrayListOf<Movie>()
 class HomeFragment : Fragment() {
 
 
@@ -38,34 +38,50 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        showStarOfFavorie()
         changeStarColor()
 
 
     }
 
+    private fun showStarOfFavorie() {
+        var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
+            binding.star4,binding.star5,binding.star6,
+            binding.star7,binding.star8,binding.star9,
+            binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
+        for (i in 0 until buttonList.size){
+            if (favoriteMovieList.contains(Film.movieList[i])){
+                buttonList[i].setBackgroundResource(R.color.yellow)
+            }else{
+                buttonList[i].setBackgroundResource(R.color.blue)
+            }
+        }
 
-   fun changeStarColor(){
+    }
+
+
+    fun changeStarColor(){
        var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
            binding.star4,binding.star5,binding.star6,
            binding.star7,binding.star8,binding.star9,
            binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
-        for (i in 0 until buttonList.size){
+       for (i in 0 until buttonList.size){
             buttonList[i].setOnClickListener{
                 var shPref :SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
                 if (shPref.getString("name",null)!= null){
                     Film.movieList[i].isFavorite = (!Film.movieList[i].isFavorite)
                     if (Film.movieList[i].isFavorite){
+                        favoriteMovieList.add(Film.movieList[i])
                         buttonList[i].setBackgroundResource(R.color.yellow)
-                    }else{
+                    }else if (!Film.movieList[i].isFavorite){
+                        favoriteMovieList.remove(Film.movieList[i])
                         buttonList[i].setBackgroundResource(R.color.blue)
                     }
-//                    buttonList[i].setBackgroundResource(R.color.yellow)
                 }else{
                     Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()
                 }
             }
-        }
+       }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
