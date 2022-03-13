@@ -39,7 +39,13 @@ class FavoriteFragment : Fragment() {
         listOfImageViews()
         listOfTextviews()
         if (shPref.getString("name",null)!= null){
-
+            for(movie in Film.movieList){
+                if (movie.isFavorite){
+                    movieNameList[i].text = getString(movie.nameId)
+                    imageList[i].setImageResource(movie.imageId)
+                    i++
+                }
+            }
         }
     }
     fun listOfImageViews(){
