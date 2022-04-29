@@ -1,10 +1,8 @@
 package com.example.movieapp
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -35,8 +33,8 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        showStarOfFavortie()
-        changeStarColor()
+//        showStarOfFavortie()
+//        changeStarColor()
         var adapter = RecyclerAdapter()
         binding.recyclerView.adapter = adapter
         adapter.submitList(Film.movieList)
@@ -44,45 +42,45 @@ class HomeFragment : Fragment() {
 
     }
 
-    private fun showStarOfFavortie() {
-//        var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
-//            binding.star4,binding.star5,binding.star6,
-//            binding.star7,binding.star8,binding.star9,
-//            binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
-        for (i in 0 until Film.movieList.size){
-            if (favoriteMovieList.contains(Film.movieList[i])){
-                binding.
-                    .setBackgroundResource(R.color.yellow)
-            }else{
-                buttonList[i].setBackgroundResource(R.color.blue)
-            }
-        }
-
-    }
-    fun changeStarColor(){
-       var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
-           binding.star4,binding.star5,binding.star6,
-           binding.star7,binding.star8,binding.star9,
-           binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
-       for (i in 0 until buttonList.size){
-            buttonList[i].setOnClickListener{
-                var shPref :SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
-                if (shPref.getString("name",null)!= null){
-                    Film.movieList[i].isFavorite = (!Film.movieList[i].isFavorite)
-                    if (Film.movieList[i].isFavorite){
-                        favoriteMovieList.add(Film.movieList[i])
-                        buttonList[i].setBackgroundResource(R.color.yellow)
-                    }else if (!Film.movieList[i].isFavorite){
-                        favoriteMovieList.remove(Film.movieList[i])
-                        buttonList[i].setBackgroundResource(R.color.blue)
-                    }
-                }else{
-                    Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()
-                    findNavController().navigate(R.id.action_homeFragment_to_profileFragment    )
-                }
-            }
-       }
-    }
+//    private fun showStarOfFavortie() {
+////        var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
+////            binding.star4,binding.star5,binding.star6,
+////            binding.star7,binding.star8,binding.star9,
+////            binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
+//        for (i in 0 until Film.movieList.size){
+//            if (favoriteMovieList.contains(Film.movieList[i])){
+//                binding.
+//                    .setBackgroundResource(R.color.yellow)
+//            }else{
+//                buttonList[i].setBackgroundResource(R.color.blue)
+//            }
+//        }
+//
+//    }
+//    fun changeStarColor(){
+//       var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
+//           binding.star4,binding.star5,binding.star6,
+//           binding.star7,binding.star8,binding.star9,
+//           binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
+//       for (i in 0 until buttonList.size){
+//            buttonList[i].setOnClickListener{
+//                var shPref :SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
+//                if (shPref.getString("name",null)!= null){
+//                    Film.movieList[i].isFavorite = (!Film.movieList[i].isFavorite)
+//                    if (Film.movieList[i].isFavorite){
+//                        favoriteMovieList.add(Film.movieList[i])
+//                        buttonList[i].setBackgroundResource(R.color.yellow)
+//                    }else if (!Film.movieList[i].isFavorite){
+//                        favoriteMovieList.remove(Film.movieList[i])
+//                        buttonList[i].setBackgroundResource(R.color.blue)
+//                    }
+//                }else{
+//                    Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()
+//                    findNavController().navigate(R.id.action_homeFragment_to_profileFragment    )
+//                }
+//            }
+//       }
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu, menu)
@@ -92,7 +90,7 @@ class HomeFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId){
             R.id.profile ->{
-                goToProfileFragmint()
+                goToProfileFragment()
                 true
             }
             R.id.favorit ->{
@@ -107,7 +105,7 @@ class HomeFragment : Fragment() {
         }
 
     }
-    private fun goToProfileFragmint() {
+    private fun goToProfileFragment() {
         var bundle = bundleOf("h" to 1)
         findNavController().navigate(R.id.action_homeFragment_to_profileFragment,bundle)
     }

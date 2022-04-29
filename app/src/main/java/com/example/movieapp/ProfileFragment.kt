@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.movieapp.databinding.FragmentProfileBinding
 
@@ -25,7 +26,7 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentProfileBinding.inflate(inflater, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile,container,false)
         // Inflate the layout for this fragment
         return binding.root
     }
@@ -36,10 +37,11 @@ class ProfileFragment : Fragment() {
         showInfo()
         buttonClickListener()
 
+
     }
 
     private fun buttonClickListener() {
-       binding.register.setOnClickListener{
+      binding.register.setOnClickListener{
            if (isfielsFullAndCorrect()){
                 saveInfo()
 

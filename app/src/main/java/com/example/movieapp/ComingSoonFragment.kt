@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import com.example.movieapp.databinding.FragmentComingSoonBinding
 
 class ComingSoonFragment : Fragment() {
@@ -22,7 +23,7 @@ class ComingSoonFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentComingSoonBinding.inflate(inflater,container,false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_coming_soon,container,false)
         // Inflate the layout for this fragment
         return binding.root
     }

@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import com.example.movieapp.databinding.FragmentFavoriteBinding
 
 
@@ -27,7 +28,7 @@ class FavoriteFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding  = FragmentFavoriteBinding.inflate(inflater,container,false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_favorite,container,false)
         // Inflate the layout for this fragment
         return binding.root
 
