@@ -37,18 +37,22 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         showStarOfFavortie()
         changeStarColor()
+        var adapter = RecyclerAdapter()
+        binding.recyclerView.adapter = adapter
+        adapter.submitList(Film.movieList)
 
 
     }
 
     private fun showStarOfFavortie() {
-        var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
-            binding.star4,binding.star5,binding.star6,
-            binding.star7,binding.star8,binding.star9,
-            binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
-        for (i in 0 until buttonList.size){
+//        var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
+//            binding.star4,binding.star5,binding.star6,
+//            binding.star7,binding.star8,binding.star9,
+//            binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
+        for (i in 0 until Film.movieList.size){
             if (favoriteMovieList.contains(Film.movieList[i])){
-                buttonList[i].setBackgroundResource(R.color.yellow)
+                binding.
+                    .setBackgroundResource(R.color.yellow)
             }else{
                 buttonList[i].setBackgroundResource(R.color.blue)
             }

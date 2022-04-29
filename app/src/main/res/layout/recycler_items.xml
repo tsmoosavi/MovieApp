@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
         <data>
                 <variable
-                    name="movie"
+                    name="film"
                     type="com.example.movieapp.Movie" />
         </data>
 
@@ -22,14 +22,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@{movie.imageId}" />
+            app:srcCompat="@{film.imageId}" />
 
         <TextView
             android:id="@+id/txv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@{String.valueOf(movie.nameId)}"
+            android:text="@{String.valueOf(film.nameId)}"
             android:textColor="@color/yellow"
             android:textSize="17sp"
             android:textStyle="bold"
