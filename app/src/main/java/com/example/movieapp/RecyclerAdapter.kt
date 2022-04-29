@@ -10,8 +10,8 @@ import com.example.movieapp.databinding.ItemrecyclerBinding
 
 
 
-typealias clickHandler = (Movie) ->Unit
-class RecyclerAdapter(): ListAdapter<Movie, RecyclerAdapter.ItemHolder>(MovieDiffCallback) {
+typealias clickHandler = () ->Unit
+class RecyclerAdapter(var movieClick: clickHandler ): ListAdapter<Movie, RecyclerAdapter.ItemHolder>(MovieDiffCallback) {
     var favoriteMovieList = arrayListOf<Movie>()
     class ItemHolder(val binding: ItemrecyclerBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -42,9 +42,17 @@ class RecyclerAdapter(): ListAdapter<Movie, RecyclerAdapter.ItemHolder>(MovieDif
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
        holder.binding.film = getItem(position)
+        if (Film.movieList[position].isFavorite){
+            favoriteMovieList.add(Film.movieList[position])
+            holder.binding.star.setBackgroundResource(R.color.yellow)
+        }
+        else if (!Film.movieList[position].isFavorite){
+            favoriteMovieList.remove(Film.movieList[position])
+            holder.binding.star.setBackgroundResource(R.color.blue)
+        }
         holder.binding.star.setOnClickListener {
+            Film.movieList[position].isFavorite = !Film.movieList[position].isFavorite
             if (Film.movieList[position].isFavorite){
-                Film.movieList[position].isFavorite = !Film.movieList[position].isFavorite
                 favoriteMovieList.add(Film.movieList[position])
                 holder.binding.star.setBackgroundResource(R.color.yellow)
             }
@@ -52,8 +60,8 @@ class RecyclerAdapter(): ListAdapter<Movie, RecyclerAdapter.ItemHolder>(MovieDif
                 favoriteMovieList.remove(Film.movieList[position])
                 holder.binding.star.setBackgroundResource(R.color.blue)
             }
+        movieClick.invoke()
 
-//        clickMovie.invoke(getItem(position))
         }
     }
 }

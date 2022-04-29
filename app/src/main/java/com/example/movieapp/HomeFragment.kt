@@ -3,10 +3,13 @@ package com.example.movieapp
 import android.content.Context
 import android.os.Bundle
 import android.view.*
+import android.widget.GridLayout
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.movieapp.databinding.FragmentHomeBinding
 
 var favoriteMovieList = arrayListOf<Movie>()
@@ -35,11 +38,12 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 //        showStarOfFavortie()
 //        changeStarColor()
-        var adapter = RecyclerAdapter()
+        var adapter = RecyclerAdapter{
+            tost()
+        }
+        binding.recyclerView.layoutManager = GridLayoutManager(context,3)
         binding.recyclerView.adapter = adapter
         adapter.submitList(Film.movieList)
-
-
     }
 
 //    private fun showStarOfFavortie() {
@@ -115,6 +119,9 @@ class HomeFragment : Fragment() {
 
     private fun goToComingSoonFragment() {
         findNavController().navigate(R.id.action_homeFragment_to_comingSoonFragment)
+    }
+    fun tost(){
+        Toast.makeText(activity, "favorite", Toast.LENGTH_SHORT).show()
     }
 
 
