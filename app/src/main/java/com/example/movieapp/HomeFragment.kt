@@ -7,6 +7,7 @@ import android.view.*
 import android.widget.Button
 import android.widget.Toast
 import androidx.core.os.bundleOf
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.movieapp.databinding.FragmentHomeBinding
@@ -28,8 +29,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(inflater,container,false)
-        // Inflate the layout for this fragment
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home,container,false)
         return binding.root
 
     }
@@ -77,7 +77,7 @@ class HomeFragment : Fragment() {
                     }
                 }else{
                     Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()
-                    findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
+                    findNavController().navigate(R.id.action_homeFragment_to_profileFragment    )
                 }
             }
        }
