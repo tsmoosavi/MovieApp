@@ -13,7 +13,7 @@ object Film {
     var movie10 = Movie(R.drawable.venomone,R.string.venom,R.id.star10)
     var movie11 = Movie(R.drawable.venomtow,R.string.venom2,R.id.star11)
     var movie12 = Movie(R.drawable.sing,R.string.sing,R.id.star12)
-    var movie13 = Movie(R.drawable.inside,R.string.insideOut,R.id.star13)
+//    var movie13 = Movie(R.drawable.inside,R.string.insideOut,R.id.star13)
     var movieList = arrayListOf(movie1, movie2,movie3, movie4,movie5, movie6,movie7, movie8,movie9, movie10,movie11, movie12)
 
 

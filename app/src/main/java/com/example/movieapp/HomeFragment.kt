@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
-import android.widget.Button
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
@@ -14,8 +13,6 @@ import com.example.movieapp.databinding.FragmentHomeBinding
 
 var favoriteMovieList = arrayListOf<Movie>()
 class HomeFragment : Fragment() {
-
-
     lateinit var binding: FragmentHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,13 +35,13 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        showStarOfFavorie()
+        showStarOfFavortie()
         changeStarColor()
 
 
     }
 
-    private fun showStarOfFavorie() {
+    private fun showStarOfFavortie() {
         var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
             binding.star4,binding.star5,binding.star6,
             binding.star7,binding.star8,binding.star9,
@@ -95,11 +92,11 @@ class HomeFragment : Fragment() {
                 true
             }
             R.id.favorit ->{
-                 goToFavoriteFragmint()
+                 goToFavoriteFragment()
                  true
             }
             R.id.comingSoon->{
-                goToComingSoonFragmint()
+                goToComingSoonFragment()
                 true
             }
             else ->return super.onOptionsItemSelected(item)
@@ -110,11 +107,11 @@ class HomeFragment : Fragment() {
         var bundle = bundleOf("h" to 1)
         findNavController().navigate(R.id.action_homeFragment_to_profileFragment,bundle)
     }
-    private fun goToFavoriteFragmint() {
+    private fun goToFavoriteFragment() {
         findNavController().navigate(R.id.action_homeFragment_to_favoriteFragment)
     }
 
-    private fun goToComingSoonFragmint() {
+    private fun goToComingSoonFragment() {
         findNavController().navigate(R.id.action_homeFragment_to_comingSoonFragment)
     }
 

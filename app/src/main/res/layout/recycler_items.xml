@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <data>
+                <variable
+                    name="movie"
+                    type="com.example.movieapp.Movie" />
+        </data>
 
-    android:id="@+id/movie1"
-    android:layout_width="wrap_content"
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:id="@+id/movie"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp">
 
@@ -13,17 +20,16 @@
             android:layout_height="215dp"
             android:layout_marginTop="4dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/fastfive" />
+            app:srcCompat="@{movie.imageId}" />
 
         <TextView
             android:id="@+id/txv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/fast5"
+            android:text="@{String.valueOf(movie.nameId)}"
             android:textColor="@color/yellow"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -33,16 +39,18 @@
             app:layout_constraintTop_toBottomOf="@id/fast5" />
 
         <ImageButton
-            android:id="@+id/star1"
+            android:id="@+id/star"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_marginTop="160dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="100dp"
             android:background="@color/blue"
             android:backgroundTintMode="screen"
             android:src="@drawable/ic_outline_star_border_24"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
