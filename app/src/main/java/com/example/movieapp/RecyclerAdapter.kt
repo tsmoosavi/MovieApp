@@ -41,19 +41,19 @@ class RecyclerAdapter(): ListAdapter<Movie, RecyclerAdapter.ItemHolder>(MovieDif
     }
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-//       holder.binding.film = getItem(position)
-//        holder.binding.star.setOnClickListener {
-//            if (Film.movieList[position].isFavorite){
-//                Film.movieList[position].isFavorite = !Film.movieList[position].isFavorite
-//                favoriteMovieList.add(Film.movieList[position])
-//                holder.binding.star.setBackgroundResource(R.color.yellow)
-//            }
-//            else if (!Film.movieList[position].isFavorite){
-//                favoriteMovieList.remove(Film.movieList[position])
-//                holder.binding.star.setBackgroundResource(R.color.blue)
-//            }
-//
-////        clickMovie.invoke(getItem(position))
-//        }
+       holder.binding.film = getItem(position)
+        holder.binding.star.setOnClickListener {
+            if (Film.movieList[position].isFavorite){
+                Film.movieList[position].isFavorite = !Film.movieList[position].isFavorite
+                favoriteMovieList.add(Film.movieList[position])
+                holder.binding.star.setBackgroundResource(R.color.yellow)
+            }
+            else if (!Film.movieList[position].isFavorite){
+                favoriteMovieList.remove(Film.movieList[position])
+                holder.binding.star.setBackgroundResource(R.color.blue)
+            }
+
+//        clickMovie.invoke(getItem(position))
+        }
     }
 }
