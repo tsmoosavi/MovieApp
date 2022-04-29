@@ -35,7 +35,7 @@ class RecyclerAdapter(): ListAdapter<Movie, RecyclerAdapter.ItemHolder>(MovieDif
             parent,false
         )
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.recycler_items, parent, false)
+            .inflate(R.layout.itemrecycler, parent, false)
 
         return ItemHolder(binding)
     }

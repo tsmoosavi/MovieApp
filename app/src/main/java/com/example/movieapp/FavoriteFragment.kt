@@ -42,7 +42,7 @@ class FavoriteFragment : Fragment() {
         if (shPref.getString("name",null)!= null){
             for(movie in Film.movieList){
                 if (movie.isFavorite){
-                    movieNameList[i].text = getString(movie.nameId)
+                    movieNameList[i].text = movie.nameId
                     imageList[i].setImageResource(movie.imageId)
                     i++
                 }
