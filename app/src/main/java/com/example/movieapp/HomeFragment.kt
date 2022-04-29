@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
 //        showStarOfFavortie()
 //        changeStarColor()
         var adapter = RecyclerAdapter{
-            tost()
+            tost(it)
         }
         binding.recyclerView.layoutManager = GridLayoutManager(context,3)
         binding.recyclerView.adapter = adapter
@@ -120,8 +120,14 @@ class HomeFragment : Fragment() {
     private fun goToComingSoonFragment() {
         findNavController().navigate(R.id.action_homeFragment_to_comingSoonFragment)
     }
-    fun tost(){
-        Toast.makeText(activity, "favorite", Toast.LENGTH_SHORT).show()
+    fun tost(film: Movie){
+            if (film.isFavorite){
+                Toast.makeText(activity, "Added to Favorite", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(activity, "Remove from Favorite", Toast.LENGTH_SHORT).show()
+            }
+
+
     }
 
 

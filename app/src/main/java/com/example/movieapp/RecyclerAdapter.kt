@@ -10,7 +10,7 @@ import com.example.movieapp.databinding.ItemrecyclerBinding
 
 
 
-typealias clickHandler = () ->Unit
+typealias clickHandler = (Movie) ->Unit
 class RecyclerAdapter(var movieClick: clickHandler ): ListAdapter<Movie, RecyclerAdapter.ItemHolder>(MovieDiffCallback) {
     var favoriteMovieList = arrayListOf<Movie>()
     class ItemHolder(val binding: ItemrecyclerBinding):RecyclerView.ViewHolder(binding.root)
@@ -60,7 +60,7 @@ class RecyclerAdapter(var movieClick: clickHandler ): ListAdapter<Movie, Recycle
                 favoriteMovieList.remove(Film.movieList[position])
                 holder.binding.star.setBackgroundResource(R.color.blue)
             }
-        movieClick.invoke()
+        movieClick.invoke(getItem(position))
 
         }
     }
