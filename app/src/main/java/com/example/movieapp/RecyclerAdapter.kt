@@ -44,6 +44,5 @@ class RecyclerAdapter(var movieClick: clickHandler ): ListAdapter<Movie, Recycle
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
        holder.binding.film = getItem(position)
         movieClick(holder.binding.star, Film.movieList[position])
-
     }
 }

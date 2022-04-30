@@ -37,8 +37,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        showStarOfFavortie()
-//        changeStarColor()
+
         var adapter = RecyclerAdapter{
             button, film ->onMovieClick (button, film)
         }
@@ -47,45 +46,6 @@ class HomeFragment : Fragment() {
         adapter.submitList(Film.movieList)
     }
 
-//    private fun showStarOfFavortie() {
-////        var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
-////            binding.star4,binding.star5,binding.star6,
-////            binding.star7,binding.star8,binding.star9,
-////            binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
-//        for (i in 0 until Film.movieList.size){
-//            if (favoriteMovieList.contains(Film.movieList[i])){
-//                binding.
-//                    .setBackgroundResource(R.color.yellow)
-//            }else{
-//                buttonList[i].setBackgroundResource(R.color.blue)
-//            }
-//        }
-//
-//    }
-//    fun changeStarColor(){
-//       var buttonList = arrayListOf(binding.star1,binding.star2,binding.star3,
-//           binding.star4,binding.star5,binding.star6,
-//           binding.star7,binding.star8,binding.star9,
-//           binding.star10,binding.star11,binding.star12)   //wher should I put this button list????
-//       for (i in 0 until buttonList.size){
-//            buttonList[i].setOnClickListener{
-//                var shPref :SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
-//                if (shPref.getString("name",null)!= null){
-//                    Film.movieList[i].isFavorite = (!Film.movieList[i].isFavorite)
-//                    if (Film.movieList[i].isFavorite){
-//                        favoriteMovieList.add(Film.movieList[i])
-//                        buttonList[i].setBackgroundResource(R.color.yellow)
-//                    }else if (!Film.movieList[i].isFavorite){
-//                        favoriteMovieList.remove(Film.movieList[i])
-//                        buttonList[i].setBackgroundResource(R.color.blue)
-//                    }
-//                }else{
-//                    Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()
-//                    findNavController().navigate(R.id.action_homeFragment_to_profileFragment    )
-//                }
-//            }
-//       }
-//    }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu, menu)
@@ -124,11 +84,9 @@ class HomeFragment : Fragment() {
 
     fun onMovieClick(button: ImageButton, film:Movie){
         if (film.isFavorite){
-            favoriteMovieList.add(film)
             button.setBackgroundResource(R.color.yellow)
         }
         else if (!film.isFavorite){
-            favoriteMovieList.remove(film)
             button.setBackgroundResource(R.color.blue)
         }
 
