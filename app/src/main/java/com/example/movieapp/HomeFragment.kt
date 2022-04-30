@@ -3,9 +3,9 @@ package com.example.movieapp
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.ImageButton
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
@@ -14,10 +14,15 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieapp.databinding.FragmentHomeBinding
+import com.google.android.exoplayer2.ExoPlayer
+import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.Player
+import com.google.common.collect.ImmutableList
 
 var favoriteMovieList = arrayListOf<Movie>()
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment() , Player.Listener{
     lateinit var binding: FragmentHomeBinding
+    private lateinit var player: ExoPlayer
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
@@ -39,6 +44,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupPlayer()
+        addMP4Files()
+        addMP3()
+
         var linearShow = true
         binding.changeView.setOnClickListener {
             linearShow = !linearShow
@@ -55,6 +64,49 @@ class HomeFragment : Fragment() {
         }
         binding.recyclerView.adapter = adapter
         adapter.submitList(Film.movieList)
+    }
+
+    private fun addMP3() {
+        val mediaItem = MediaItem.fromUri("https://storage.googleapis.com/exoplayer-test-media-0/play.mp3")
+        player.setMediaItem(mediaItem)
+        player.setMediaItem(mediaItem)
+        player.prepare()
+    }
+
+    /**
+     * Called when the Fragment is no longer started.  This is generally
+     * tied to [Activity.onStop] of the containing
+     * Activity's lifecycle.
+     */
+    override fun onStop() {
+        super.onStop()
+        player.release()
+    }
+    override fun onResume() {
+            super.onResume()
+            setupPlayer()
+            addMP3()
+            addMP4Files()
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("player", "onSaveInstanceState: " + player.currentPosition)
+    }
+
+
+    private fun addMP4Files() {
+        val mediaItem = MediaItem.fromUri("https://storage.googleapis.com/exoplayer-test-media-0/BigBuckBunny_320x180.mp4")
+        val newItems: List<MediaItem> = ImmutableList.of(
+            mediaItem
+        )
+        player.addMediaItems(newItems)
+        player.prepare()
+    }
+
+    private fun setupPlayer() {
+        player = ExoPlayer.Builder(requireActivity()).build()
+        binding.exoPlayer.player = player
+        player.addListener(this)
     }
 
 

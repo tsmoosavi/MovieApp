@@ -5,10 +5,14 @@
     <data>
 
     </data>
-
+ <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     android:background="@color/black">
 
     <Button
@@ -23,23 +27,30 @@
         app:layout_constraintTop_toTopOf="parent"
          />
 
-    <ScrollView
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/exoPlayer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="300dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/changeView"
-        android:layout_marginTop="50dp"
-        tools:context=".HomeFragment">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/changeView">
 
-        <!-- TODO: Update blank fragment layout -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-    </ScrollView>
+    </com.google.android.exoplayer2.ui.PlayerView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exoPlayer"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
