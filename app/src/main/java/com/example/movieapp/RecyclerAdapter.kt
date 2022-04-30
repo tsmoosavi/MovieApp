@@ -2,6 +2,8 @@ package com.example.movieapp
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -10,7 +12,7 @@ import com.example.movieapp.databinding.ItemrecyclerBinding
 
 
 
-typealias clickHandler = (Movie) ->Unit
+typealias clickHandler = (ImageButton,Movie) ->Unit
 class RecyclerAdapter(var movieClick: clickHandler ): ListAdapter<Movie, RecyclerAdapter.ItemHolder>(MovieDiffCallback) {
     var favoriteMovieList = arrayListOf<Movie>()
     class ItemHolder(val binding: ItemrecyclerBinding):RecyclerView.ViewHolder(binding.root)
@@ -27,7 +29,6 @@ class RecyclerAdapter(var movieClick: clickHandler ): ListAdapter<Movie, Recycle
         }
     }
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
         val binding: ItemrecyclerBinding  = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),
@@ -42,26 +43,7 @@ class RecyclerAdapter(var movieClick: clickHandler ): ListAdapter<Movie, Recycle
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
        holder.binding.film = getItem(position)
-        if (Film.movieList[position].isFavorite){
-            favoriteMovieList.add(Film.movieList[position])
-            holder.binding.star.setBackgroundResource(R.color.yellow)
-        }
-        else if (!Film.movieList[position].isFavorite){
-            favoriteMovieList.remove(Film.movieList[position])
-            holder.binding.star.setBackgroundResource(R.color.blue)
-        }
-        holder.binding.star.setOnClickListener {
-            Film.movieList[position].isFavorite = !Film.movieList[position].isFavorite
-            if (Film.movieList[position].isFavorite){
-                favoriteMovieList.add(Film.movieList[position])
-                holder.binding.star.setBackgroundResource(R.color.yellow)
-            }
-            else if (!Film.movieList[position].isFavorite){
-                favoriteMovieList.remove(Film.movieList[position])
-                holder.binding.star.setBackgroundResource(R.color.blue)
-            }
-        movieClick.invoke(getItem(position))
+        movieClick(holder.binding.star, Film.movieList[position])
 
-        }
     }
 }

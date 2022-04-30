@@ -1,9 +1,10 @@
 package com.example.movieapp
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
-import android.widget.GridLayout
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
@@ -39,7 +40,7 @@ class HomeFragment : Fragment() {
 //        showStarOfFavortie()
 //        changeStarColor()
         var adapter = RecyclerAdapter{
-            tost(it)
+            button, film ->onMovieClick (button, film)
         }
         binding.recyclerView.layoutManager = GridLayoutManager(context,3)
         binding.recyclerView.adapter = adapter
@@ -120,17 +121,39 @@ class HomeFragment : Fragment() {
     private fun goToComingSoonFragment() {
         findNavController().navigate(R.id.action_homeFragment_to_comingSoonFragment)
     }
-    fun tost(film: Movie){
-            if (film.isFavorite){
-                Toast.makeText(activity, "Added to Favorite", Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(activity, "Remove from Favorite", Toast.LENGTH_SHORT).show()
+
+    fun onMovieClick(button: ImageButton, film:Movie){
+        if (film.isFavorite){
+            favoriteMovieList.add(film)
+            button.setBackgroundResource(R.color.yellow)
+        }
+        else if (!film.isFavorite){
+            favoriteMovieList.remove(film)
+            button.setBackgroundResource(R.color.blue)
+        }
+
+            button.setOnClickListener{
+                var shPref : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
+                if (shPref.getString("name",null)!= null){
+                    film.isFavorite = !film.isFavorite
+                    if (film.isFavorite){
+                        Toast.makeText(activity, "Added to Favorite", Toast.LENGTH_SHORT).show()
+                    }else{
+                        Toast.makeText(activity, "Remove from Favorite", Toast.LENGTH_SHORT).show()
+                    }
+                    if (film.isFavorite){
+                        favoriteMovieList.add(film)
+                        button.setBackgroundResource(R.color.yellow)
+                    }
+                    else if (!film.isFavorite){
+                        favoriteMovieList.remove(film)
+                        button.setBackgroundResource(R.color.blue)
+                    }
+                }else{
+                    Toast.makeText(context, "ابتدا مشخصات خود را وارد کنید.", Toast.LENGTH_SHORT).show()
+                    findNavController().navigate(R.id.action_homeFragment_to_profileFragment    )
+                }
+
             }
-
-
     }
-
-
-
-
 }

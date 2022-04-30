@@ -26,11 +26,11 @@ object Film {
     var movie23 = Movie(R.drawable.inside,"inside Out")
     var movie24 = Movie(R.drawable.soul,"soul")
     var movie25 = Movie(R.drawable.queen,"شاهزاده روم")
-    var movie26 = Movie(R.drawable.soul,"soul")
-    var movie27 = Movie(R.drawable.soul,"soul")
-    var movie28 = Movie(R.drawable.soul,"soul")
-    var movie29 = Movie(R.drawable.location,"موقعیت مهدی")
-    var movie30 = Movie(R.drawable.rooz,"روز صفر")
+    var movie26 =  Movie(R.drawable.location,"موقعیت مهدی")
+    var movie27 = Movie(R.drawable.rooz,"روز صفر")
+    var movie28 = Movie(R.drawable.majara,"ماجرای نیمروز")
+    var movie29 = Movie(R.drawable.body,"بادیگارد")
+    var movie30 = Movie(R.drawable.molk,"ملک سلیمان نبی")
 
     var movieList = arrayListOf(movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8, movie9, movie10, movie11, movie12, movie13, movie14, movie15,
                                  movie16, movie17, movie18, movie19, movie20, movie21, movie22, movie23, movie24, movie25, movie26, movie27, movie28, movie29, movie30)
