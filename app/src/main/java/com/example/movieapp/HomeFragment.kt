@@ -5,12 +5,14 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieapp.databinding.FragmentHomeBinding
 
 var favoriteMovieList = arrayListOf<Movie>()
@@ -37,11 +39,20 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        var linearShow = true
+        binding.changeView.setOnClickListener {
+            linearShow = !linearShow
+            if (linearShow){
+                binding.recyclerView.layoutManager =LinearLayoutManager(context)
+            }else if(!linearShow){
+                binding.recyclerView.layoutManager = GridLayoutManager(context,3)
+            }
+        }
+
 
         var adapter = RecyclerAdapter{
             button, film ->onMovieClick (button, film)
         }
-        binding.recyclerView.layoutManager = GridLayoutManager(context,3)
         binding.recyclerView.adapter = adapter
         adapter.submitList(Film.movieList)
     }
